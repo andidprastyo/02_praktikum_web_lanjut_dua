@@ -8,7 +8,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        echo "Selamat Datang!"
+        echo "Selamat Datang!";
     }
     
     public function about()
@@ -19,6 +19,6 @@ class PageController extends Controller
 
     public function article($id)
     {
-        echo "Halaman Artikel dengan ID $id"
+        echo "Halaman Artikel dengan ID $id";
     }
 }

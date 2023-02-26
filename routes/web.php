@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'PageController@index');
-Route::get('/about', 'PageController@about');
-Route::get('/article/{id}', 'PageController@article');
+// Route::get('/', 'PageController@index');
+// Route::get('/about', 'PageController@about');
+// Route::get('/article/{id}', 'PageController@article');
+
+Route::get('/',[HomeController::class, 'index']);
+Route::get('/about',[AboutController::class, 'about']);
+Route::get('/article/{id}',[ArticleController::class, 'article']);
